@@ -1,20 +1,20 @@
-#Custom Headers is a fork of ModHeader
+# Custom Headers is a fork of ModHeader
 
-##The original project can be located [here](https://modheader.com/modheader)
+## The original project can be located [here](https://modheader.com/modheader)
 
-###TODO
+### TODO
 * migrate to manifest v3
     * https://developer.chrome.com/docs/extensions/develop/migrate
     * https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers
 
-###Packaging Instructions
+### Packaging Instructions
 
 command line example: `'/cygdrive/c/Program Files/Google/Chrome/Application/chrome.exe' --pack-extension="D:\projects\modheader\oss-modheader\src"`
 
 * **NOTE:** the `--pack-extension` argument MUST be followed directly with the `="/path/to/dir"`
     * if there is a space, or the quotes/equals sign are ommitted, the command may fail
 
-###Installation Instructions
+### Installation Instructions
 
 **Unpacked:**
 
