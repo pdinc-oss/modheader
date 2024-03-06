@@ -95,7 +95,7 @@ modHeader.factory('dataSource', function($mdToast) {
     localStorage.removeItem('isPaused');
     $mdToast.show(
       $mdToast.simple()
-        .content('ModHeader unpaused')
+        .content('Custom Headers unpaused')
         .position('bottom')
         .hideDelay(1000)
     );
@@ -106,7 +106,7 @@ modHeader.factory('dataSource', function($mdToast) {
     localStorage.lockedTabId = dataSource.lockedTabId;
     $mdToast.show(
       $mdToast.simple()
-        .content('Restricted ModHeader to the current tab')
+        .content('Restricted Custom Headers to the current tab')
         .position('bottom')
         .hideDelay(1000)
     );
@@ -117,7 +117,7 @@ modHeader.factory('dataSource', function($mdToast) {
     localStorage.removeItem('lockedTabId');
     $mdToast.show(
       $mdToast.simple()
-        .content('Applying ModHeader to all tabs')
+        .content('Applying Custom Headers to all tabs')
         .position('bottom')
         .hideDelay(1000)
     );
@@ -570,18 +570,6 @@ modHeader.controller('AppController', function(
     {text: 'Tip: Append header value to existing one in profile setting'},
     {text: 'Tip: Pause button will temporarily pause all modifications'},
     {text: 'Tip: Go to cloud backup to retrieve your auto-synced profile'},
-    {
-      text: 'If you like ModHeader, please consider donating',
-      buttonText: 'Donate',
-      url: 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3XFKZ8PCRB8P6&currency_code=USD&amount=5&source=url'
-    },
-    {
-      text: 'Enjoying ModHeader, leave us a review',
-      buttonText: 'Review',
-      url: navigator.userAgent.indexOf('Firefox') >= 0
-          ? 'https://addons.mozilla.org/firefox/addon/modheader-firefox/'
-          : 'https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj'
-    },
   ];
   const tip = tips[Math.floor(Math.random() * tips.length)];
   $mdToast.show({

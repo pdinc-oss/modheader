@@ -284,7 +284,7 @@ function createContextMenu() {
     browser.contextMenus.update(
       'pause',
       {
-        title: 'Unpause ModHeader',
+        title: 'Unpause Custom Headers',
         contexts: ['browser_action'],
         onclick: () => {
           localStorage.removeItem('isPaused');
@@ -295,7 +295,7 @@ function createContextMenu() {
     browser.contextMenus.update(
       'pause',
       {
-        title: 'Pause ModHeader',
+        title: 'Pause Custom Headers',
         contexts: ['browser_action'],
         onclick: () => {
           localStorage.isPaused = true;
