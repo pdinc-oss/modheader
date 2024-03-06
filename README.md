@@ -8,6 +8,10 @@ TODO:
         src/background.js:364:      saveStorageToCloud();
         src/background.js:371:      saveStorageToCloud();
 
+    migrate to manifest v3
+        https://developer.chrome.com/docs/extensions/develop/migrate
+        https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers
+
 Packaging Instructions
 command line example:
 '/cygdrive/c/Program Files/Google/Chrome/Application/chrome.exe' --pack-extension="D:\projects\modheader\oss-modheader\src"
