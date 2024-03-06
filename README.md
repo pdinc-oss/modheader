@@ -1,6 +1,6 @@
 #Custom Headers is a fork of ModHeader
 
-##The original project can be located here: https://modheader.com/modheader
+##The original project can be located [here](https://modheader.com/modheader)
 
 ###TODO
 * migrate to manifest v3
