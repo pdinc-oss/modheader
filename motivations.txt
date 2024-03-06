@@ -1,0 +1,41 @@
+After ModHeaders transitioned to closed-source, we had observed some suspicious behavior.
+
+In this situation, the extension was configured to allow access to every page visited.
+
+On every page-load, we observed a two-part JavaScript application being injected.
+
+It appears that, on each page visited, the URL and body were iterated and sent to "www.baidu.com"
+
+The JavaScript files in question were titled "content_script.js", and "content_script-EldOSLIJ.js".
+
+The contents of each file are below.
+
+content_script-EldOSLIJ.js
+	(function () {
+		'use strict';
+	
+		const importPath = /*@__PURE__*/ JSON.parse('"../js/service/content_script.js"');
+	
+		import(chrome.runtime.getURL(importPath));
+	
+	})();
+
+
+content_script.js:
+	const e = ["www.baidu.com"];
+	chrome.storage.local.get(["show_side_ball", "disable_side_ball_domains"], (o=>{
+	    const t = o.disable_side_ball_domains || [];
+	    !1 !== o.show_side_ball && -1 === t.indexOf(window.location.hostname) && import('../../chunk-content_script_app-tKfSXoyl.js').then((o=>{
+	        let t = o.default
+	          , n = document.location.hostname
+	          , a = document.body;
+	        -1 !== e.indexOf(n) && (a = document.documentElement),
+	        new t({
+	            target: a
+	        });
+	    }
+	    )).catch((e=>{}
+	    ));
+	}
+	));
+
