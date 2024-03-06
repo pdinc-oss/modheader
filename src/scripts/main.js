@@ -559,17 +559,16 @@ modHeader.controller('AppController', function(
   $scope.profileService = profileService;
 
   const tips = [
-    {text: 'Tip: You can switch between multiple profile'},
+    {text: 'Tip: You can switch between multiple profiles'},
     {text: 'Tip: You can export your profile to share with others'},
     {text: 'Tip: Tab lock will apply the modification only to locked tab'},
     {text: 'Tip: Add filter will let you use regex to limit modification'},
     {text: 'Tip: Use the checkbox to quickly toggle header modification'},
     {text: 'Tip: Click on the column name to sort'},
     {text: 'Tip: Add filter also allows you to filter by resource type'},
-    {text: 'Tip: Go to profile setting to toggle comment column'},
+    {text: 'Tip: Go to profile settings to toggle comment column'},
     {text: 'Tip: Append header value to existing one in profile setting'},
     {text: 'Tip: Pause button will temporarily pause all modifications'},
-    {text: 'Tip: Go to cloud backup to retrieve your auto-synced profile'},
   ];
   const tip = tips[Math.floor(Math.random() * tips.length)];
   $mdToast.show({
