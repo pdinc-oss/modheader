@@ -1,0 +1,50 @@
+https://developer.chrome.com/docs/extensions/get-started/tutorial/service-worker-events#step-4
+
+{
+  ...
+  "permissions": ["storage"],
+}
+
+https://stackoverflow.com/questions/66851301/permission-all-urls-is-unknown-or-url-pattern-is-malformed/66867507#66867507
+unsupported "all_urls" with v3: `["<all_urls>"]` -> `["*://*/*"]`, or `["http://*/*", "https://*/*"]`
+this goes under "host_permissions", not just "permissions"
+
+```
+  "host_permissions": [
+    "*://*.example.org/"
+  ],
+  "permissions": [
+    "storage"
+  ],
+```
+
+
+
+https://developer.chrome.com/docs/extensions/develop/migrate/blocking-web-requests
+
+https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest
+
+
+https://developer.chrome.com/docs/extensions/develop/migrate/known-issues#closing_the_platform_gap
+Increase the number of static and enabled rulesets for Declarative Net Request (DNR). Enabled static rulesets increased from 10 to 50 and total static rulesets from 50 to 100 [Chrome 120].
+
+
+technical end date for support: until June 2025
+https://chromeenterprise.google/policies/#ExtensionManifestV2Availability
+
+Data type:
+Integer
+Windows:REG_DWORD
+Windows registry location:
+
+Software\Policies\Google\Chrome\ExtensionManifestV2Availability
+
+0 = Default browser behavior
+1 = Manifest v2 is disabled
+2 = Manifest v2 is enabled
+3 = Manifest v2 is enabled for forced extensions only
+
+
+
+https://developer.chrome.com/docs/extensions/develop/migrate
+https://developer.chrome.com/docs/extensions/develop/migrate/checklist
